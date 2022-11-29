@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComentariosPostController">
+   <children>
+      <Label text="Comentarios">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="lblComentarios" alignment="CENTER" contentDisplay="CENTER" prefHeight="268.0" prefWidth="428.0" text="Sin Comentarios" textAlignment="CENTER" />
+   </children>
+</VBox>

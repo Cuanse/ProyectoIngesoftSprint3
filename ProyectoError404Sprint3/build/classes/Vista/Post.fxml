@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="GridPost" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PostController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="600.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2ECC71;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Bienvenido a UNforo" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnInicioPost" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #2ECC71; -fx-border-radius: 5px;" text="Inicio" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnPerfilPost" mnemonicParsing="false" onMouseClicked="#verPerfil" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #2ECC71; -fx-border-radius: 5px;" text="Perfil" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnCrearPost" mnemonicParsing="false" onMouseClicked="#CrearPost" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #2ECC71; -fx-border-radius: 5px;" text="Crear" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAmigosPost" mnemonicParsing="false" onMouseClicked="#Amigos" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #2ECC71; -fx-border-radius: 5px;" text="Amigos" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="106.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnSalirPost" mnemonicParsing="false" onMouseClicked="#CERRARSESION" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #2ECC71;" text="Salir" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#PostsDeportesForo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" text="Deportes">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="10.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnPref2" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" text="Grupos de Estudio">
+                     <HBox.margin>
+                        <Insets bottom="3.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#PostsGuardados" prefHeight="30.0" prefWidth="150.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-radius: 5px;" text="Posts Guardados">
+                     <HBox.margin>
+                        <Insets bottom="3.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="73.0" prefWidth="126.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btnPrevPost" mnemonicParsing="false" onMouseClicked="#Prev" prefHeight="34.0" prefWidth="46.0" style="-fx-background-color: white; -fx-border-radius: 5px;">
+                           <HBox.margin>
+                              <Insets bottom="3.0" right="1.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnNextPost" mnemonicParsing="false" onMouseClicked="#Next" style="-fx-background-color: white; -fx-border-radius: 5px;">
+                           <HBox.margin>
+                              <Insets bottom="3.0" right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/next.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Pane fx:id="PanePost" prefHeight="160.0" prefWidth="579.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox fx:id="vBox1" alignment="TOP_CENTER" layoutX="1.0" onMouseClicked="#Vbox1Clicked" prefHeight="160.0" prefWidth="579.0">
+                     <children>
+                        <Label fx:id="lblTittlePost1" text="Titulo 1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="lblTextPost1" text="Orem Implus es la cosa de relleno para imprentas en los documentos..." />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="160.0" prefWidth="579.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="1.0" onMouseClicked="#Vbox2Clicked" prefHeight="158.0" prefWidth="589.0">
+                     <children>
+                        <Label fx:id="lblTittlePost2" text="Titulo 2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="lblTextPost2" text="Orem Implus es la cosa de relleno para imprentas en los documentos..." />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#OrderMasLikes" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-trend-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#OrderAdminPosts" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-popularity-32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#OrderRecientes" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-history-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label onMouseClicked="#pag1" prefHeight="17.0" prefWidth="12.0" text="1" />
+                  <Label onMouseClicked="#pag2" prefHeight="17.0" prefWidth="12.0" text="2" />
+                  <Label onMouseClicked="#pag3" prefHeight="17.0" prefWidth="12.0" text="3" />
+                  <Label onMouseClicked="#pag4" prefHeight="17.0" prefWidth="12.0" text="4" />
+                  <Label onMouseClicked="#pag5" prefHeight="17.0" prefWidth="12.0" text="5" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
